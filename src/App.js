@@ -1,11 +1,11 @@
+import * as facemesh from '@tensorflow-models/facemesh';
 import React, { useEffect, useRef, useState } from 'react';
 import Webcam from 'react-webcam';
 import './App.css';
 import { config, detectorConfig } from './config';
-//import * as ft from '@tensorflow/tfjs';
-import * as facemesh from '@tensorflow-models/face-landmarks-detection';
-import drawMesh from './helper';
+import { drawMesh } from './helper';
 
+//! не отображаются точки на лице. Возможно не трекается.
 function App() {
 	const [isEnabled, setIsEnabled] = useState(false);
 	const webcamRef = useRef(null);
